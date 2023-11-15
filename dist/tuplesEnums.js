@@ -1,11 +1,12 @@
+"use strict";
 // We can define arrays with specific length and types for each elements: Tuples.
-var color = [255, 0, 255];
-var goodRes = [200, "OK"];
-var badRes = [500, "Internal Server Error"];
+let color = [255, 0, 255];
+const goodRes = [200, "OK"];
+const badRes = [500, "Internal Server Error"];
 badRes[0] = 300;
 // badRes[0] = "Test" // Error, type 'string' is not assignable to type 'number'.
 // We can now create an array of tuples:
-var responses = [[404, "Not Found"], [200, "OK"]];
+const responses = [[404, "Not Found"], [200, "OK"]];
 // NOTE that we can push, pop, etc on tuples:
 badRes.push(123);
 console.log(badRes);
@@ -18,7 +19,7 @@ var OrderStatus;
     OrderStatus[OrderStatus["DELIVERED"] = 2] = "DELIVERED";
     OrderStatus[OrderStatus["RETURNED"] = 3] = "RETURNED"; // 3
 })(OrderStatus || (OrderStatus = {}));
-var myStatus = OrderStatus.DELIVERED;
+const myStatus = OrderStatus.DELIVERED;
 function isDelivered(status) {
     return status === OrderStatus.DELIVERED;
 }

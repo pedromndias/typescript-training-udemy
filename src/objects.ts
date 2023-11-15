@@ -20,16 +20,16 @@ function randomCoordinate(): {x: number, y: number} {
 }
 
 // We can also define our own type to reuse it:
-type Point = {
+type Point4 = {
     x: number;
     y: number;
     z?: number; // z is an optional property
 }
-let coordinate2: Point = {x: 30, y: 22}
-function randomCoordinate2(): Point {
+let coordinate2: Point4 = {x: 30, y: 22}
+function randomCoordinate2(): Point4 {
     return {x: Math.random(), y: Math.random()}
 }
-function doublePoint(point: Point): Point {
+function doublePoint(point: Point4): Point4 {
     return {x: point.x * 2, y: point.y * 2}
 }
 

@@ -1,9 +1,9 @@
 // Interfaces allows to describe the shape of objects.
-interface Point {
+interface Point2 {
     x: number;
     y: number;
 }
-const pt: Point = { x: 123, y: 1234 };
+const pt: Point2 = { x: 123, y: 1234 };
 
 interface Person {
     readonly id: number;
@@ -25,13 +25,13 @@ thomas.first = "Tom";
 // thomas.id = 2 // Error (can not modify readonly)
 console.log(thomas.sayHi());
 
-interface Product {
+interface Product2 {
     name: string,
     price: number,
     applyDiscount(discount: number): number
 }
 
-const shoes: Product = {
+const shoes: Product2 = {
     name: "Blue shoes",
     price: 100,
     applyDiscount(amount: number) {
@@ -72,4 +72,25 @@ const chewy: ServiceDog = {
         return "Hey!"
     },
     job: "guide dog"
+}
+
+interface Human {
+    name: string
+}
+
+interface Employee {
+    readonly id: number,
+    email: string
+}
+// We can extend multiple interfaces:
+interface Engineer extends Human, Employee {
+    level: string,
+    languages: string[]
+}
+const pierre: Engineer = {
+    name: "Pierre",
+    id: 123455,
+    email: "pierre@gmail.com",
+    level: "senior",
+    languages: ["JS", "Python"]
 }

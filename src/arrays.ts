@@ -11,12 +11,12 @@ ageList[0] = 99;
 const bools: Array<boolean> = []
 
 // Array of custom types:
-type Point = {
+type Point3 = {
     x: number,
     y: number
 }
-const coords: Point[] = []
-coords.push({x: 23, y: 8})
+const coords2: Point3[] = []
+coords2.push({x: 23, y: 8})
 
 // Multidimensional arrays:
 const board: string[][] = [
